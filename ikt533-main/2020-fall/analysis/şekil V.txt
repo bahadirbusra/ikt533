@@ -1,0 +1,17 @@
+
+*****Figure 1- 1930-1939 dönemi için yatay eksende doðum çeyreklerinin ve yýllarýn, dikey eksende ise o çeyrekte doðanlarýn eðitim seviyelerinin ortalamalarýnýn
+yer aldýðý çizgi grafiði.
+
+
+use "C:\Users\kenan\Desktop\ak91.dta"
+tab qob, gen(q)
+gen age = ((79 - yob)*4 + 5 - qob)/4
+gen age2 = age^2
+collapse s lnw q*, by(age)
+gen yob = 80-age
+
+label var s "Years of education"
+label var lnw "Log Weekly Earnings"
+label var age "Age"
+label var yob "Year of Birth"
+twoway (line s yob) (scatter s yob if q4 == 1) (scatter s yob if q1 == 1) (scatter s yob if q2 == 1) (scatter s yob if q3 == 1, msym(Oh))
