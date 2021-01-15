@@ -1,0 +1,453 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{ragged2e}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{csvsimple}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{placeins}
+\graphicspath{ {./graphics/} }
+\geometry{a4paper, top=2cm, bottom=1cm, hmargin=2.3cm,  includehead, includefoot}
+
+\title{Emek Ekonomisi- IKT533}
+\author{Büşra Bahadir }
+\date{January 2021}
+\maketitle
+\subsection*{Makalenin Kısa Özeti}
+    Bu çalışmanın temel amacı zorunlu göçü doğal bir deney olarak kullanarak Suriyeli göçmenlerin yerli nüfusun işgücü piyasası üzerindeki etkilerini analiz etmektedir. Bu çalışma farkların farkları yöntemi (difference in difference method) ile göç öncesi ve sonrası dönemde mültecileri kabul eden ve etmeyen bölgelerdeki yerlilerin sonuçlarını karşılaştırmaktadır. Suriyeli mültecilerin Türkiye’ ye büyük oranlarda girişi 2012 yılı başlangıcında başlamıştır. Dolayısıyla, müdahee tarihi 1 Ocak 2012 olarak kabu edilir. 2010-2011 göç öncesi periyod (pre-immigration period) ve 2012-2013 ie göç sonrası periyod (post-immigration period) olarak kabul edildi. Suriyeli mültecilerin çok ufak bir kısmı Türkiye’ nin Güneydoğusunda kalıp ve ülkenin Kuzey ve Batı kısımlarına doğru hareket ederken, çok büyük bir kısım mülteci de Türkiye-Suriye sınırının yakınındaki şehirlere yerleştiler. 
+\\
+\\
+Türkiye’ nin Güneydoğusunda mülteci nüfus oranının yüzde  2'nin nin üzerinde olduğu şehirlerden “müdahele bölgesi (treatment area) oluşturulmuş. Komşu bölgelerde Suriyeli mültecilerin önemsenmeyecek bir miktarına ev sahipliği yapan kalan şehirlerde kontrol bölgesini (control area) oluşturmuştur. Kontrol bölgesi kültürel açılardan, sosyo-demografik karakteristikler açısından ve ekonomik gelişme açısından müdahele bölgesine benzerdir.
+\\
+\\
+Veri seti sadece yerlilerden oluşmaktadır.  Yerliler hakkında verilen veriler göz önüne alındığında, farkların farkı stratejisi kontrol bölgesiyle göç öncesi ve göç sonrası karşılaştırmasına dayalı olarak müdahele bölgesinde yaşayan yerlilerin işgücü piyasası sonuçları üzerindeki Suriyeli mültecilerin etkisini belirlemektedir. Örneklem NUTS2 sınıflamasına göre belirlenen Türkiye’ deki 26 bölgeden 9’ unu kapsamaktadır. Müdahele bölgesi Güneydoğu Anadolu’daki 5 bölgeyi kapsamaktadır. Kontrol bölgesi Doğu Anadoludaki 4 bölgeyi kapsamaktadır. 
+\\
+\\
+\\
+ \newpage
+    \subsection*{Özet İstatistikler- Tablo 3}
+  
+   
+
+    
+\begin{document}
+
+\maketitle
+        \begin{table}[h]
+            \subsection*{Table 3 Summary statistics: demographic characteristics for natives}
+            \begin{tabular}{|llllll|}
+            \hline
+                 & \multicolumn{2}{|c|}{Pre-treatment} & \multicolumn{2}{|c|}{Post-treatment} &\\
+                 & 2010 & 2011 & 2012 & 2013 & Total \\ \hline
+                \multicolumn{6}{|c|}{Treatment Area}\\ \hline
+                Men  & 0,481 & 0,482 & 0,480 & 0,480 & 0,481 \\ 
+               Age & 34,6 & 34,9 & 35,2 & 35,5 & 35,0 \\ 
+               Married & 0,645 & 0,640 & 0,635 & 0,638 & 0,64 \\ 
+               High school and above & 0,221 & 0,233 & 0,236 & 0,247 & 0,234 \\ 
+                Urban & 0,729 & 0,743 & 0,740 & 0,752 & 0,741 \\ 
+                Number of obs. & 58143 & 56382 & 56167 & 54656 & 225348 \\ \hline 
+                \multicolumn{6}{|c|}{Control Area}\\ \hline
+                Men  & 0,479 & 0,489 & 0,491 & 0,490 & 0,487 \\
+                Age & 34,0 & 34,1 & 34,4 & 34,5 & 34.2 \\ 
+               Married & 0,643 & 0,635 & 0,633 & 0,628 & 0,635 \\ 
+               High school and above & 0,216 & 0,232 & 0,261 & 0,249 & 0,239 \\ 
+                Urban& 0,532 & 0,509 & 0,512 & 0,525 & 0,520 \\ 
+                Number of obs. & 33646 & 32614 & 31127 & 31288 & 128675 \\ \hline
+            \end{tabular}
+        \end{table}
+\
+Yukarıdaki tablo yerli nüfus için sosyal ve demografik özelliklere ait özet istatistikleri yansıtmaktadır. Müdahele ve kontrol bölgelerindeki bireylerin sosyal ve demografik özelliklerinin oldukça benzer olduğu gözlemlenmektedir. Dahası 2010 ve 203 arasında sosyal ve demografik özellikleri belirgin şekilde değişmemektedir. İş hayatının ilk erken evrelerinde olan genç bireylerin oranı örneklemde yüksektir. Lise ve üniversite mezunlarının bölgesel nüfusa oranı müdahele ve kontrol bölgelerinde oldukça düşüktür. Tablo 3’ teki kontrol ve müdahele bölgelerindeki sosyal ve demografik özellikleri gösteren özet istatistiklere bakıdığında her yıl için rakamlar iki bölgede de oldukça benzer olduğu göze çarpmaktadır. Zaten kontrol ve müdahele bölgeleri seçilirken bu göz önünde bulundurulmuştur.
+ \\
+ \\
+Tablodaki şehirleşmeyi gösteren özet istatistiğinin ortalama değerine bakıldığında şehirleşme oranları açısından bazı farklılıklar olduğu görülür. Müdahele bölgesi kontrol bölgesine kıyasla biraz daha şehirleşmiştir. İşgücü piyasası göstergelerindeki farklılıkları kentleşme oranlarındaki farklılıklara bağlamak mümkündür. Bu olasılığı yakalamak için, regresyonlarda kentsel / kırsal ikamet durumu kontrol edilmiştir.
+\\
+\\
+\\
+
+\newpage
+    \subsection*{Özet İstatistikler- Tablo 4}
+  Aşağıdaki tablo yerli nüfus için işgücü piyasası göstergelerinin özet istatistiklerini içermektedir. Tabloya göre kontrol ve müdahele bölgeleri arasında temel işgücü piyasası göstergeleri açısından bakıldığında bazı farklılıklar vardır. İşsizlik oranı ise müdahele bölgesinde daha yüksekken, istihdam ve işgücüne katılım oranları kontrol bölgesiyle kıyaslandığında müdahele bölgesinde daha düşüktür. 
+        \begin{table}[h]
+        \subsection*{Table 4 Summary statistics: labor market outcomes for natives}
+    
+            \begin{tabular}{|cccccc|}
+            \hline
+                 & \multicolumn{2}{|c|}{Pre-treatment} & \multicolumn{2}{|c|}{Post-treatment} &\\
+                 & 2010 & 2011 & 2012 & 2013 & Total \\ \hline
+                \multicolumn{8}{|c|}{Treatment Area}\\ \hline  
+                TE/P & 0,389 & 0,398 & 0,388 & 0,398 & 0,393 \\  
+                FE/P  & 0,167 & 0,183 & 0,196 & 0,216 & 0,189 \\ 
+                IE/P & 0,222 & 0,215 & 0,192 & 0,181 & 0,203 \\ 
+               U/P & 0,066 & 0,054 & 0,050 & 0,061 & 0,058 \\ 
+               LFP & 0,456 & 0,452 & 0,439 & 0,459 & 0,450 \\
+                Real Wages (TL) & 868,5 & 914,7 & 956,7 & 976,7 & 929,2
+                \\
+                Separation prob. & 0,087 & 0,076 & 0,076 & 0,102 & 0,085 \\
+                Job finding prob. & 0,385 & 0,434 & 0,417 & 0,398 & 0,408 \\
+                \hline
+                \multicolumn{8}{|c|}{Control Area}\\ \hline
+               TE/P & 0,440 & 0,458 & 0,463 & 0,477 & 0,458 \\
+                FE/P & 0,159 & 0,180 & 0,199 & 0,202 & 0,183 \\ 
+               IE/P & 0,281 & 0,278 & 0,264 & 0,275 & 0,275\\ 
+               U/P & 0,058 & 0,050 & 0,041 & 0,043 & 0,048 \\ 
+               LFP & 0,498 & 0,509 & 0,504 & 0,520 & 0,506 \\
+                Real Wages (TL) & 1070,9 & 1097,7 & 1142,5 & 1121,5 & 1108,2 \\
+                 Separation prob. & 0,052 & 0,054 & 0,059 & 0,062 & 0,057 \\
+                Job finding prob. & 0,331 & 0,385 & 0,409 & 0,407 & 0,381 \\
+                \hline
+            \end{tabular}
+        \end{table}
+        \FloatBarrier
+    \end{justify}
+\
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\newpage
+    \subsection*{Kayıtdışı İstihdamın Yerli Nüfusa Oranı- Table 5}
+    Tablo 5 mülteci girişinin yerli nüfus için kayıt dışı istihdam olasılığı üzerindeki etkisini göstermektedir. Bağımlı değişken ikili bir gösterge olup kayıtdışı bir işe sahip olan birey için 1 değerini almakta ve diğer şekilde de 0 değerini almaktadır. İlk sütuna bakıldığında Türkiye’ deki müdahele bölgelerine mülteci girişi kontrol bölgelerindeki yerli nüfusa kıyasla bu bölgelerdeki yerlilerin kayıtdışı bir işe sahip olma olasılığını yüzde 2,2 azaltmaktadır. İkinci sütün aynı analizi söz konusu bölgelerin yıllık ticaret hacmini de kontrol ederek yapmaktadır. Sonuçlar yaklaşık olarak aynı çıkmaktadır ve mülteci girişi bölgelerin değişen ekonomik aktvitelerinden daha çok tahmini etkileri yönendirmektedir. Üçüncü ve dördüncü sütunlar, etkinin hem erkekler hem de kadınlar arasında istatistiksel olarak anlamlı olduğunu ve kadınlar arasında daha büyük olduğunu göstermektedir. Son iki sütun, etkinin daha az eğitimli bireyler, yani lise mezunu olmayanlar arasında yoğunlaştığını göstermektedir.
+   \subsection*{Table 5 Informal employment-to-population ratio}
+\begin{tabular}{l*{6}{c}}
+
+\hline\hline
+Variable
+            &\multicolumn{1}{c}{Total}&\multicolumn{1}{c}{Total}&\multicolumn{1}{c}{Men}&\multicolumn{1}{c}{Women}&\multicolumn{1}{c}{High Ed.}&\multicolumn{1}{c}{Low Ed.}\\
+\hline
+Refugee effect (RXT)        &     -0.0228\sym{***}&     -0.0224\sym{***}&     -0.0176\sym{***}&     -0.0268\sym{***}&     0.00717         &     -0.0335\sym{***}\\
+            &   (0.00281)         &   (0.00281)         &   (0.00444)         &   (0.00344)         &   (0.00457)         &   (0.00339)         \\
+[1em]
+Year fixed effects         &       Yes&       Yes&                     Yes&                     Yes&      Yes&       Yes\\
+            &            &            &                     &                     &            &           \\
+[1em]
+Region fixed effects     &     Yes&      Yes&      Yes&     Yes &     Yes&      Yes\\
+            &            &            &           &            &          &            \\
+[1em]
+Other controls       &      Yes&      Yes&      Yes&      Yes&      Yes&     Yes\\
+            &           &           &         &           &           &           \\
+[1em]
+Log trade vol.   &                    No &     Yes &     Yes&   Yes         &   Yes        &     Yes \\
+            &                     &            &           &           &            &           \\
+[1em]
+Intercept     &       0.307\sym{***}&       0.719\sym{***}&       1.225\sym{***}&       0.397\sym{*}  &       0.107         &       0.813\sym{***}\\
+            &   (0.00278)         &     (0.148)         &     (0.240)         &     (0.175)         &     (0.242)         &     (0.178)         \\
+\hline
+Number of obs.       &      354023         &      354023         &      171017         &      183006         &       83415         &      270608         \\
+\(R^{2}\)   &       0.124         &       0.124         &       0.091         &       0.123         &       0.052         &       0.125         \\
+adj. \(R^{2}\)&       0.124         &       0.124         &       0.091         &       0.123         &       0.052         &       0.125         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
+\
+{
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+\
+\newpage
+    \subsection*{İşgücüne Katılım Oranı- Table 6}
+    Kayıtdışı bir işe sahip olma olasılığındaki düşüş kayıtlı istihdama geçmediğiniz sürece negatif bir sonuç doğuracağı düşünülür. Kayıtdışı çalıştıkları işi kaybeden kişiler kalan 3 işgücü piyasası durumundan birine geçerler. Hem işgücünden çıkarlar, hem işsiz kalırlar veya kayıtlı çalışacakları bir iş bulurlar. Aşağıdaki tablo mülteci girişlerinin Türkiye’ nin Güneydoğu’ sundaki yerli bireylerin işgücü katılımı üzerindeki etkiyi tahmin etmektedir. Örneklem Tablo 5’ te kullanılan örneklemle aynıdır. Bağımlı değişken ikili gösterge olup eğer kişi işgücü içinde ise 1, diğer durumda 0 değerini almaktadır. İkinci sütundaki tahminlere göre control bölgesindeki yerlilerle kıyaslandığında mülteci girişleri müdahele bölgesindeki yerli bireylerin iş gücüne katılımını yüzde 1,1 azaltmaktadır. Üçüncü ve dördüncü sütun etkinin çoğunlukla kadınlar tarafından yönlendirildiğini göstermektedir. Erkekler arasında tahmin edilen etki pozitif ama istatistiksel olarak anlamsızken kadınlar arasında etki negatif ve istatistiksel olarak anlamlı çıkmaktadır. Son sütun etkinin düşük eğitim seviyesine sahipbireyler arasında yoğunlaştığını göstermektedir.
+  \subsection*{Table 6 Labor force participation}
+\begin{tabular}{l*{6}{c}}
+\hline
+
+\hline\hline
+            
+Variable
+
+&\multicolumn{1}{c}{Total}&\multicolumn{1}{c}{Total}&\multicolumn{1}{c}{Men}&\multicolumn{1}{c}{Women}&\multicolumn{1}{c}{High Ed.}&\multicolumn{1}{c}{Low Ed.}\\
+\hline
+Refugee effect (RXT)         &     -0.0110\sym{***}&     -0.0117\sym{***}&     0.00510         &     -0.0282\sym{***}&     0.00277         &     -0.0175\sym{***}\\
+            &   (0.00287)         &   (0.00287)         &   (0.00391)         &   (0.00400)         &   (0.00585)         &   (0.00327)         \\
+[1em]
+Year fixed efffects         &       Yes&       Yes&             Yes&                    Yes&       Yes&       Yes\\
+            &           &           &                     &                     &           &            \\
+[1em]
+Region fixed effects     &      Yes&      Yes&      Yes&     Yes&      Yes &     Yes\\
+            &           &           &           &          &            &           \\
+[1em]
+Other controls       &      Yes&      Yes&     Yes&      Yes&     Yes&      Yes\\
+            &          &           &          &            &           &            \\
+[1em]
+Log trade vol.   &                    No &     Yes&     Yes&            Yes&     Yes&      Yes  \\
+            &                     &           &           &           &            &          \\
+[1em]
+Intercept      &       0.220\sym{***}&      -0.548\sym{***}&      -0.724\sym{***}&      0.0892         &      -1.574\sym{***}&      -0.184         \\
+            &   (0.00290)         &     (0.154)         &     (0.218)         &     (0.205)         &     (0.322)         &     (0.174)         \\
+\hline
+Number of obs.       &      354023         &      354023         &      171017         &      183006         &       83415         &      270608         \\
+\(R^{2}\)   &       0.336         &       0.336         &       0.227         &       0.127         &       0.273         &       0.338         \\
+adj. \(R^{2}\)&       0.336         &       0.336         &       0.227         &       0.127         &       0.273         &       0.338         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
+\
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+\
+\newpage
+    \subsection*{İşsizliğin Yerli Nüfusa Oranı- Table 7}
+    Tablo 7 mülteci girişinin Türkiye’ nin Güneydoğu bölgelerindeki yerleşik bireylerin işsizliği üzerindeki tahmini etkisini göstermektedir. Örneklem aynı şekilde Tablo 5 ve Tablo 6’ daki ile aynı ve 15-64 yaş aralığındaki işgücü katılımı durumu ne olursa olsun bütün bireyleri kapsamaktadır. İlk iki sütun müdahele bölgesindeki toplam nüfus içinde işsiz bireylerin oranının mülteci girişlerinden sonra yüzde 0.7 arttığını göstermektedir. Sonraki iki sütun mülteci girişinin etkisinin erkekler arasında istatistiksel olarak anlamlı olduğunu ve kadınlar arasında istatistiksel olarak anlamsız olduğunu göstermektedir. Son iki sütun etkinin lise mezuniyetine sahip olmayan, düşük eğitimli olarak sınıflandırılan bireyler tarafından yönlendirildiğini göstermektedir. 
+\subsection*{Table 7 Unemployment-to-population ratio}
+
+\begin{tabular}{l*{6}{c}}
+\hline
+
+\hline
+Variable           
+            &\multicolumn{1}{c}{Total}&\multicolumn{1}{c}{Total}&\multicolumn{1}{c}{Men}&\multicolumn{1}{c}{Women}&\multicolumn{1}{c}{High Ed.}&\multicolumn{1}{c}{Low Ed.}\\
+\hline
+Refugee effect (RxT)         &     0.00785\sym{***}&     0.00718\sym{***}&      0.0149\sym{***}&    0.000140         &     0.00535         &     0.00763\sym{***}\\
+            &   (0.00152)         &   (0.00152)         &   (0.00274)         &   (0.00142)         &   (0.00372)         &   (0.00161)         \\
+[1em]
+Year fixed  effects         &      Yes&      Yes&                Yes &                     Yes&     Yes&      Yes\\
+            &           &           &                     &                     &            &          \\
+[1em]
+Region fixed effects     &     Yes&     Yes&     Yes&     Yes&     Yes&   Yes\\
+            &            &            &            &          &           &            \\
+[1em]
+Other controls       &      Yes&      Yes&      Yes&     Yes&     Yes&      Yes\\
+            &           &           &           &           &          &           \\
+[1em]
+Log trade vol   &                     No&     Yes&     Yes&     Yes &      Yes&      Yes\\
+            &                     &          &           &            &           &           \\
+[1em]
+Intercept      &      0.0408\sym{***}&      -0.710\sym{***}&      -1.273\sym{***}&      -0.160\sym{*}  &      -0.800\sym{***}&      -0.708\sym{***}\\
+            &   (0.00156)         &    (0.0787)         &     (0.145)         &    (0.0681)         &     (0.192)         &    (0.0841)         \\
+\hline
+Number of obs.      &      354023         &      354023         &      171017         &      183006         &       83415         &      270608         \\
+\(R^{2}\)   &       0.033         &       0.033         &       0.015         &       0.046         &       0.032         &       0.041         \\
+adj. \(R^{2}\)&       0.033         &       0.033         &       0.015         &       0.046         &       0.031         &       0.041         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
+\
+\
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+\newpage
+    \subsection*{Kayıtlı İstihdamın Yerli Nüfusa Oranı- Table 8}
+    Son olarak mülteci girişlerinin Türkiye’ nin Güneydoğu bölgelerindeki yerleşik bireyler arasında kayıtlı bir işe sahip olma olasılığı üzerindeki tahmini etkisi Tablo 8’ de gösterilmektedir. İlk iki sütun mülteci girişlerinden sonra kontrol bögesindeki yerleşik bireylerle karşılaştırıldığında müdahele bölgelerinde yerleşik bireyler arasında kayıtlı bir işe sahip olma olasılığı yüzde 0.4 artmıştır. Sonraki sütunlara bakıldığında etki erkekler arasında ve düşük eğitim seviyelerinde yoğunlaşmıştır. Bu etki kadınlar için ve yüksek eğitim düzeyli bireyler arasında istatistiksel olarak anlamsız çıkmıştır.  
+
+Şimdiye kadar olan kısmı özetleyecek olursak mülteci girişinin bir sonucu olarak, müdahele bölgesindeki yerli bireyler için kayıt dışı bir işe sahip olma olasılığının yüzde 2,2 puan düştüğünü görüyoruz.
+Kayıt dışı istihdamdaki bu düşüşün yüzde 1,1’ i işgücünden çıkmış, yüzde 0,7’ si işsiz kalmış ve yüzde 0,4’ ü kayıtlı işe geçmiştir. Erkekler için kayıtdışı istihdam olasılığındaki düşüş yüzde 1,9’ dur. Kayıtdışı işlerini kaybeden erkekler işgücünden çıkmamıştır. Kadınlar için kayıtdışı bir işe sahip olma olasılığındaki düşüş daha yüksek ve yüzde 2,6’ dır. Erkeklerden farklı olarak kadınlarda işsizlikte ve kayıtlı istihdam olasılığında herhangi bir artış bulunmamıştır. Kayıtsız işlerini kaybeden bütün kadınlar işgücünün dışına çıkmıştır. 
+Mülteci girişlerine karşılık olarak işgücü piyasasındaki cinsiyet farklılıkları kısmende olsa bölgedeki ataerkil sosyal normlar tarafından açıklanabilir. Bu bölgede kadınlar için işgücüne katılım oranı oldukça düşüktür ve kadınlar çoğunluka yerleşim yerlerinin yakın çevresindeki işlerde kayıtdışı olarak çalışmayı seçerler. Bu kadınlar için iş alternatifleri çok kısıtlıdır ve bir kere işlerini kaybederlerse onar için doğan sonuç işgücünün dışına çıkmaktır. 
+
+\subsection*{Table 8 Formal Employment-to-population ratio}
+
+\begin{tabular}{l*{6}{c}}
+\hline
+\hline
+            
+Variable            &\multicolumn{1}{c}{Total}&\multicolumn{1}{c}{Total}&\multicolumn{1}{c}{Men}&\multicolumn{1}{c}{Women}&\multicolumn{1}{c}{High Ed.}&\multicolumn{1}{c}{Low Ed.}\\
+\hline
+Refugee effect (RXT)         &     0.00393         &     0.00354         &     0.00783         &    -0.00149         &    -0.00975         &     0.00843\sym{***}\\
+            &   (0.00230)         &   (0.00231)         &   (0.00406)         &   (0.00207)         &   (0.00622)         &   (0.00227)         \\
+[1em]
+Year fixed effects         &       Yes&      Yes&                    Yes &                    Yes &       Yes&       Yes\\
+            &          &            &                     &                     &            &           \\
+[1em]
+Region fixed effects     &      Yes&     Yes&     Yes&     Yes&       Yes&      Yes\\
+            &            &           &            &          &            &            \\
+[1em]
+Other Controls      &      Yes&      Yes&      Yes&     Yes&      Yes&      Yes\\
+            &           &            &            &           &            &           \\
+[1em]
+Log trade vol.   &                     No&    Yes&     Yes&   Yes        &      Yes  &    Yes         \\
+            &                     &            &            &            &             &           \\
+[1em]
+Intercept      &      -0.127\sym{***}&      -0.557\sym{***}&      -0.677\sym{**} &      -0.148         &      -0.880\sym{**} &      -0.290\sym{*}  \\
+            &   (0.00215)         &     (0.124)         &     (0.219)         &     (0.109)         &     (0.341)         &     (0.121)         \\
+\hline
+Number of obs.       &      354023         &      354023         &      171017         &      183006         &       83415         &      270608         \\
+\(R^{2}\)   &       0.280         &       0.280         &       0.250         &       0.185         &       0.236         &       0.171         \\
+adj. \(R^{2}\)&       0.280         &       0.280         &       0.250         &       0.184         &       0.236         &       0.171         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
+
+
+\newpage
+    \subsection*{İşten Ayrılma Olasılığı- Table 9}
+Tablo 9 mülteci girişlerinin müdahele bölgelerindeki yerli bireylerin işten ayrıma olasılıkları üzerindeki etkisini tahmin eden analiz sonuçlarını göstermektedir. Örneklem tam olarak bir yıönce istihdamda olan 15-64 yaş aralığındaki bütün bireyleri kapsamaktadır. İkili gösterge geçen yıl istihdamda olup şu an istihdamda olmayan bireyler için 1 değerini almaktadır. Sonuçlar mülteci girişinin yerli bireylerin işten ayrılma olasılığı üzerinde hiçbir etkisi olmadığını göstermektedir. 
+\subsection*{Table 9 Job separation probability}
+
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+Variable
+            &\multicolumn{1}{c}{Total}&\multicolumn{1}{c}{Total}&\multicolumn{1}{c}{Men}&\multicolumn{1}{c}{Women}&\multicolumn{1}{c}{High Ed.}&\multicolumn{1}{c}{Low Ed.}\\
+\hline
+Refugee effect (RXT)         &     0.00110         &     0.00110         &     0.00127         &     0.00297         &    -0.00267         &     0.00387         \\
+            &   (0.00275)         &   (0.00275)         &   (0.00311)         &   (0.00582)         &   (0.00458)         &   (0.00342)         \\
+[1em]
+Year fixed effects         &     Yes&     Yes&                     Yes&                     Yes&     Yes&     Yes\\
+            &            &            &                     &                     &            &            \\
+[1em]
+Region fixed effects     &     Yes&     Yes&     Yes&      Yes&     Yes&    Yes \\
+            &            &            &            &           &           &           \\
+[1em]
+Other controls       &      Yes&      Yes&      Yes&      Yes&      Yes&      Yes\\
+            &            &           &            &            &            &            \\
+[1em]
+Log trade vol.   &                    No &   Yes        &     Yes         &    Yes         &    Yes         &    Yes         \\
+            &                     &            &            &            &             &          \\
+[1em]
+Intercept      &       0.126\sym{***}&       0.112         &      0.0656         &       0.250         &       0.165         &      0.0760         \\
+            &   (0.00337)         &     (0.155)         &     (0.175)         &     (0.325)         &     (0.251)         &     (0.195)         \\
+\hline
+Number of obs.       &      136824         &      136824         &      100549         &       36275         &       43288         &       93536         \\
+\(R^{2}\)   &       0.024         &       0.024         &       0.018         &       0.051         &       0.033         &       0.024         \\
+adj. \(R^{2}\)&       0.024         &       0.024         &       0.018         &       0.051         &       0.033         &       0.024         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
+
+\
+\
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+
+\newpage
+    \subsection*{İş Bulma Olasılığı- Table 10}
+    Tablo 10 aynı analizin iş bulma olasılığı için yapılmış tahminlerini göstermektedir. Örneklem tam olarak bir yıl önce çalışmayan ve aktif olarak iş arayan 15-64 yaş aralığındaki bütün bireyleri kapsamaktadır. İkili gösterge eğer kişi geçen yıl işsiz ve şu an bir işe sahip olanlar için 1 değerini almaktadır. Tahminler negatif ve istatistiksel olarak anlamlıdır. Müdahele bölgelerindeki hem erkekler hem kadınlar mülteci girişleri sonrasında kontrol bölgelerindeki erkek ve kadınlara kıyasla bir iş bulmakta daha zorlanmaktadırlar. 
+
+Tablo 9 ve Tablo 10 mülteci girişinin etkisinin, işten ayrılma olasılığını artırmak yerine iş bulma olasılığını azaltarak gerçekleştiğini göstermektedir.
+
+\subsection*{Table 10 Job finding probability}
+
+
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+Variable
+            &\multicolumn{1}{c}{Total}&\multicolumn{1}{c}{Total}&\multicolumn{1}{c}{Men}&\multicolumn{1}{c}{Women}&\multicolumn{1}{c}{High Ed.}&\multicolumn{1}{c}{Low Ed.}\\
+\hline
+Refugee effect (RXT)         &     -0.0457\sym{***}&     -0.0456\sym{***}&     -0.0430\sym{***}&     -0.0604         &      0.0174         &     -0.0663\sym{***}\\
+            &    (0.0122)         &    (0.0123)         &    (0.0131)         &    (0.0353)         &    (0.0239)         &    (0.0143)         \\
+[1em]
+Year fixed effects         &       Yes&       Yes&                     Yes&                    Yes &       Yes&      Yes\\
+            &            &            &                     &                     &             &            \\
+[1em]
+Region fixed effects     &       Yes&       Yes&       Yes&     Yes         &       Yes&       Yes\\
+            &           &            &           &             &             &           \\
+[1em]
+Other controls       &      Yes &      Yes &      Yes &   Yes        &    Yes         &      Yes  \\
+            &           &            &           &             &             &            \\
+[1em]
+Log trade vol.   &                     No&    Yes        &     Yes         &      Yes         &    Yes        &     Yes         \\
+            &                     &            &             &            &             &            \\
+[1em]
+Intercept      &       0.342\sym{***}&       0.379         &       0.272         &       3.237         &       0.494         &      0.0883         \\
+            &    (0.0133)         &     (0.653)         &     (0.686)         &     (2.117)         &     (1.333)         &     (0.753)         \\
+\hline
+Number of obs.       &       29330         &       29330         &       25958         &        3372         &        7372         &       21958         \\
+\(R^{2}\)   &       0.042         &       0.042         &       0.045         &       0.040         &       0.047         &       0.043         \\
+adj. \(R^{2}\)&       0.041         &       0.041         &       0.044         &       0.034         &       0.045         &       0.043         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
+\
+\
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+\
+\newpage
+    \subsection*{Yaş Gruplarına Göre Mülteci Girişlerinin Etkisi- Table 11}
+    Tablo 11 bütün işgücü piyasası göstergeleri için farkların farkı regresyonlarını yaş grupları için özetlemektedir. 15-24 ve 55-64 arasında değişen eşit aralıklı altı yaş grubuna göre sonuçlar gösterilmiştir. Yukarıda özetlenen etkilerin daha çok 35 yaş altındaki genç bireylerde işlediği bulunmuştur. 
+Özellikle, kayıt dışı işleri kaybetme ve hem işsiz kalma (genç erkekler için) hemde işgücünden ayrılma (genç kadınlar için) en çok 35 yaşından daha genç bireylerde görülmektedir
+
+\subsection*{Table 11 Refugee effects by age groups}
+\
+\centering
+\begin{tabular}{l*{6}{c}}
+\hline
+\hline
+Outcome
+            &\multicolumn{1}{c}{Total}&\multicolumn{1}{c}{15-24}&\multicolumn{1}{c}{25-34}&\multicolumn{1}{c}{35-44}&\multicolumn{1}{c}{45-54}&\multicolumn{1}{c}{55-64}\\
+\hline
+Labor Force Part.   &   -0.0110\sym{***}&     -0.00196 &     -0.0232\sym{***}&     -0.00914          &      -0.0139         &      -.0109839\\
+            &  (0.0029)         &    (0.0056)         &    (0.0055)         &    (0.0057)         &    (0.0071)         &    (0.0091)         \\
+[1em]
+U/P         &     0.00718\sym{***}&      0.0122\sym{***}&      0.0142\sym{***}&     0.00406         &    -0.00486         &    0.000611         \\
+            &   (0.00152)         &   (0.00298)         &   (0.00365)         &   (0.00332)         &   (0.00320)         &   (0.00256)         \\
+[1em]
+IE/P        &     -0.0224\sym{***}&     -0.0187\sym{***}&     -0.0264\sym{***}&     -0.0278\sym{***}&    -0.00752         &     -0.0266\sym{**} \\
+            &   (0.00281)         &   (0.00490)         &   (0.00570)         &   (0.00643)         &   (0.00742)         &   (0.00857)         \\
+[1em]
+FE/         &     0.00354         &     0.00460         &     -0.0110\sym{*}  &      0.0146\sym{**} &    -0.00147         &      0.0150\sym{**} \\
+            &   (0.00231)         &   (0.00308)         &   (0.00537)         &   (0.00551)         &   (0.00617)         &   (0.00578)         \\
+[1em]
+Job Separation prob.         &     0.00110         &    -0.00193         &     0.00364         &     0.00350         &    -0.00253         &     0.00554         \\
+            &   (0.00275) &   (0.00919)  &   (0.00530)   &  (0.00453)  &   (0.00554) &   (0.00847)         \\
+[1em]
+Job Finding prob.         &     -0.0456\sym{***}&     -0.0661\sym{**} &     -0.0306         &     -0.0186         &     -0.0415         &     -0.0943         \\
+            &    (0.0123)         &    (0.0208)         &    (0.0220)         &    (0.0286)         &    (0.0364)         &    (0.0579)         \\
+\hline
+
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
+\newpage
+    \subsection*{Aylık Reel Gelir- Table 13}
+    Son olarak mülteci girişinin yerlilerin ücreti üzerindeki etkisi incelenmiştir. Tablo 13 mülteci girişlerinin kayıtlı çalışanların aylık reel kazançları üzerindeki etkiyi tahmin eden analiz sonuçlarını göstermektedir. Örneklem 15-64 yaş aralığında maaşlı çalışan istihdam edilen yerli bireyleri kapsamaktadır. Bağımlı değişken reel aylık kazançların logaritması alınmış şekli olarak tanımlanmıştır.  Sonuçlara bakıldığında mülteci girişlerinin yerli bireylerin reel ücretleri üzerinde istatistiksel olarak anlamlı bir ilişkisi bulunmamıştır. 
+\subsection*{Table 13 Formal real monthly earnings}
+\Floatbarrier
+\centering
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\hline
+\hline
+
+Variable
+            &\multicolumn{1}{c}{Total}&\multicolumn{1}{c}{Total}&\multicolumn{1}{c}{Men}&\multicolumn{1}{c}{Women}&\multicolumn{1}{c}{High Ed.}&\multicolumn{1}{c}{Low Ed.}\\
+\hline
+Refugee effect (RXT)         &     0.00938         &     0.00981         &     0.00951         &      0.0263         &      0.0167         &     0.00589         \\
+            &   (0.00678)         &   (0.00678)         &   (0.00720)         &    (0.0179)         &   (0.00901)         &   (0.00946)         \\
+[1em]
+Year fixed effects         &       Yes&       Yes&                     Yes&                    Yes &       Yes&      Yes\\
+            &            &            &                     &                     &             &            \\
+[1em]
+Region fixed effects     &       Yes&       Yes&       Yes&     Yes         &       Yes&       Yes\\
+            &           &            &           &             &             &           \\
+[1em]
+Other controls       &      Yes &      Yes &      Yes &   Yes        &    Yes         &      Yes  \\
+            &           &            &           &             &             &            \\
+[1em]
+Log trade vol.   &                     No&    Yes        &     Yes         &      Yes         &    Yes        &     Yes         \\
+            &                     &            &             &            &             &            \\
+[1em]
+Intercept      &       5.066\sym{***}&       6.044\sym{***}&       5.909\sym{***}&       7.170\sym{***}&       5.580\sym{***}&       5.855\sym{***}\\
+            &    (0.0183)         &     (0.366)         &     (0.385)         &     (0.999)         &     (0.488)         &     (0.507)         \\
+\hline
+Number of obs.       &       78908         &       78908         &       64346         &       14562         &       36282         &       42626         \\
+\(R^{2}\)   &       0.555         &       0.555         &       0.537         &       0.637         &       0.534         &       0.390         \\
+adj. \(R^{2}\)&       0.555         &       0.555         &       0.536         &       0.634         &       0.533         &       0.389         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
+\
+
+\end{document}
